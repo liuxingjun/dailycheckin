@@ -31,6 +31,12 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+    
+    - shell: bash
+      env:
+        SUPER_SECRET: ${{ secrets.XINGCHENG_OPENID }}
+      run: |
+        echo $SUPER_SECRET
     # Runs a single command using the runners shell
     - name: Send greeting
       run: echo "Hello ${{ github.event.inputs.name }}"

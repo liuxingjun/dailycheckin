@@ -28,7 +28,7 @@ jobs:
         env:
           XINGCHENG_OPENID: ${{ secrets.XINGCHENG_OPENID }}
           XINGCHENG_USERID: ${{ secrets.XINGCHENG_USERID }}
-        run: envsubst ./src/tocity/data.txt
+        run: envsubst < ./src/tocity/data.txt
       - name: 极米
         shell: bash
         env:

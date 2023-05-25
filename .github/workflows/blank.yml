@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Cache apt packages
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: /var/cache/apt/archives
           key: ${{ runner.os }}-apt-${{ hashFiles('**/apt.txt') }}
@@ -28,7 +28,7 @@ jobs:
         env:
           XINGCHENG_OPENID: ${{ secrets.XINGCHENG_OPENID }}
           XINGCHENG_USERID: ${{ secrets.XINGCHENG_USERID }}
-        run: envsubst < ./src/tocity/data.txt
+        run: ./src/tocity/exec.sh
       - name: 极米
         shell: bash
         env:

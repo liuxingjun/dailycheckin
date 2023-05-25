@@ -30,10 +30,10 @@ jobs:
         env:
           XINGCHENG_OPENID: ${{ secrets.XINGCHENG_OPENID }}
           XINGCHENG_USERID: ${{ secrets.XINGCHENG_USERID }}
-        run: cd src/tocity;bash ./exec.sh;
+        run: ./src/tocity/exec.sh
       - name: 极米
         shell: bash
         env:
           XGIMI_OPENID: ${{ secrets.XGIMI_OPENID }}
           XGIMI_ACCESSTOKEN: ${{ secrets.XGIMI_ACCESSTOKEN }}
-        run: cd src/xgimi;bash ./exec.sh;
+        run: ./src/xgimi/exec.sh

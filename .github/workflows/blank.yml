@@ -24,9 +24,15 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - shell: bash
+      - name: 星城
+        shell: bash
         env:
           XINGCHENG_OPENID: ${{ secrets.XINGCHENG_OPENID }}
           XINGCHENG_USERID: ${{ secrets.XINGCHENG_USERID }}
-        run: |
-          curl -s -L -X POST 'http://member.gph5.com/hq_member/Record!signIn'  -H 'Content-Type: application/x-www-form-urlencoded' --data-urlencode "userid=$XINGCHENG_USERID" --data-urlencode "openid=$XINGCHENG_OPENID"
+        run: cd src/tocity;bash ./exec.sh;
+      - name: 极米
+        shell: bash
+        env:
+          XGIMI_OPENID: ${{ secrets.XGIMI_OPENID }}
+          XGIMI_ACCESSTOKEN: ${{ secrets.XGIMI_ACCESSTOKEN }}
+        run: cd src/xgimi;bash ./exec.sh;

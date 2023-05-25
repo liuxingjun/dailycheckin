@@ -1,0 +1,2 @@
+userid=$XINGCHENG_USERID
+openid=$XINGCHENG_OPENID

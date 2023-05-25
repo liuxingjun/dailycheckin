@@ -1,0 +1,6 @@
+openId: $XGIMI_OPENID
+accessToken: $XGIMI_ACCESSTOKEN
+timestamp: 1684907784600
+sign: 7a3c62decb727b2c197c838ab62b3600
+Accept: */*
+Content-Type: application/json

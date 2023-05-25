@@ -1,4 +1,6 @@
 #!/bin/bash
+set -e
+
 PWD=$(dirname "$(readlink -f "$0")")
 
 envsubst < $PWD/headers.txt | curl -s -L -X POST \

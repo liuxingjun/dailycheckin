@@ -14,11 +14,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Cache apt packages
-        uses: actions/cache@v3
-        with:
-          path: /var/lib/apt/lists
-          key: ${{ runner.os }}-apt
       - name: Install gettext
         run: sudo apt-get update && sudo apt-get install -y gettext
       - name: 星城

@@ -10,8 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Install gettext
-        run: sudo apt-get update && sudo apt-get install -y gettext
+      - name: Install gettext jq
+        run: sudo apt-get update && sudo apt-get install -y gettext jq
       - name: 星城
         shell: bash
         env:

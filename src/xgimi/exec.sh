@@ -10,5 +10,6 @@ if ! jq -e '.code | test("ok")' <<< "$output" > /dev/null; then
   echo "xgimi signin error:$output"
   exit 1
 fi
-echo "xgimi signin succeed"
+
+echo "xgimi signin succeed:$output"
 exit 0
